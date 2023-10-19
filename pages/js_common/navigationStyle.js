@@ -1,4 +1,4 @@
-/* VARIABLE DECLERATION */
+/* GLOBAL VARIABLE DECLERATION */
 const navigation_container = document.getElementById('navigation_panel');
 
 const current_page_container = window.getComputedStyle(document.getElementById('currentPage'),null);
@@ -15,17 +15,17 @@ humMenuButton.addEventListener('click',trigger);
 
 function trigger()
 {
-	
+
 	if (navigation_container.style.display === 'flex'){
 		
 		navigation_container.style = 'display: none;';
 
-		humMenuButton.setAttribute('style','background-image: url("../../images/home/humMenuIcon.png")');
+		humMenuButton.style.transform = 'rotate(0deg)';
 	}else{
 
 		navigation_container.style = 'display: flex;';
 
-		humMenuButton.setAttribute('style','background-image: url("../../images/home/humMenuIconActive.png")');
+		humMenuButton.style.transform = 'rotate(90deg)';
 	}
 
 }

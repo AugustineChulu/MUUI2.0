@@ -125,7 +125,14 @@
 	#humMenuButton{
 		width: 20px;
 		height: 20px;
-		margin: 0 15px 0 0;
+		margin: 0 10px 0 0;
+		border: none;
+		background-color: rgba(255, 255, 255, 0.2);
+		border-radius: var(--radius);
+	}
+
+	#humMenuIcon{
+		color: #fff;
 	}
 	
 	#pageTitle{
