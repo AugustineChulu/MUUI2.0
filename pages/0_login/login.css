@@ -5,7 +5,7 @@
 
 @font-face {
 		font-family: my_roboto;
-		src: url("../../fonts/Roboto-Regular.ttf");
+		src: url("https://augustinechulu.github.io/MUUI2.0/fonts/Roboto-Regular.ttf");
 	}
 
 	body {
@@ -41,7 +41,7 @@
 		display: grid;
 		grid-template-columns: 100%;
 		grid-template-rows: 25% 75%;
-		background-image: url("http://localhost:8080/MUUIbeta/images/login/MUlibrarySquare.jpg");
+		background-image: url("https://augustinechulu.github.io/MUUI2.0/images/login/MUlibrarySquare.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-blend-mode: soft-light;

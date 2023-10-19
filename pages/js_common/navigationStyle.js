@@ -20,12 +20,12 @@ function trigger()
 		
 		navigation_container.style = 'display: none;';
 
-		humMenuButton.setAttribute('style','background-image: url("http://localhost:8080/MUUIbeta/images/home/humMenuIcon.png")');
+		humMenuButton.setAttribute('style','background-image: url("https://augustinechulu.github.io/MUUI2.0/images/home/humMenuIcon.png")');
 	}else{
 
 		navigation_container.style = 'display: flex;';
 
-		humMenuButton.setAttribute('style','background-image: url("http://localhost:8080/MUUIbeta/images/home/humMenuIconActive.png")');
+		humMenuButton.setAttribute('style','background-image: url("https://augustinechulu.github.io/MUUI2.0/images/home/humMenuIconActive.png")');
 	}
 
 }
