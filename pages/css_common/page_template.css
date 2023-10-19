@@ -125,12 +125,7 @@
 	#humMenuButton{
 		width: 20px;
 		height: 20px;
-		
-		border-style: none;
-		background-color: transparent;
-		background-image: url("../../images/home/humMenuIcon.png");
 		margin: 0 15px 0 0;
-		background-size: 100% 100%;
 	}
 	
 	#pageTitle{
