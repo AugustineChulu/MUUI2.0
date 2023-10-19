@@ -15,167 +15,171 @@
 
 </head>
 
-<body >
+<body>
 
-	<div id="header_container">
+	<div id="root_container">
+
+		<div id="header_container">
+			
+			<img alt="MU logo" src="../../images/login/MUlogo.png" id="mulungushiLogoImage">
+			
+			<span id="user_info">User status and ID</span>
 		
-		<img alt="MU logo" src="../../images/login/MUlogo.png" id="mulungushiLogoImage">
-		
-		<span id="user_info">User status and ID</span>
-	
-	</div>
-
-	<div id="page_navigation_container">
-
-		<div id="currentPage" class="rowFlexBox">
-
-			<button id="humMenuButton"></button>
-
-			<span id="pageTitle">
-				Home
-			</span>
-
 		</div>
-		
-		<ul id="navigation_panel">
 
-					<li id="hm" class="columnFlexBox navigation_menu_item">
-						<a target="_self" class="nav_link">Home</a>
-					</li>
+		<div id="page_navigation_container">
 
-					<li id="pi" class="columnFlexBox navigation_menu_item">
-						<a href="../2_personalInformation/personalInformation.html" target="_self" class="nav_link">Personal Information</a>
-					</li>
+			<div id="currentPage" class="rowFlexBox">
 
-					<li id="aa" class="columnFlexBox navigation_menu_item">
-						<a href="../3_applyForAccommodation/applyForAccommodation.html" target="_self" class="nav_link">Apply for Accommodation</a>
-					</li>
+				<button id="humMenuButton"></button>
 
-					<li id="vc" class="columnFlexBox navigation_menu_item">
-						<a href="../4_viewCA/viewCA.html" target="_self" class="nav_link">View CA</a>
-					</li>
+				<span id="pageTitle">
+					Home
+				</span>
 
-					<li id="gr" class="columnFlexBox navigation_menu_item">
-						<a href="../5_grades/grades.html" target="_self" class="nav_link">Grades</a>
-					</li>
-
-					<li id="py" class="columnFlexBox navigation_menu_item">
-						<a href="../6_payments/payments.html" target="_self" class="nav_link">Payments</a>
-					</li>
-
-					<li id="tt" class="columnFlexBox navigation_menu_item">
-						<a href="../7_timetable/timetable.html" target="_self" class="nav_link">Time Table</a>
-					</li>
-
-					<li id="ce" class="columnFlexBox navigation_menu_item">
-						<a href="../8_courseEvaluation/courseEvaluation.html" target="_self" class="nav_link">Course Evaluation</a>
-					</li>
-
-					<li id="cr" class="columnFlexBox navigation_menu_item">
-						<a href="../9_courseRegistration/courseRegistration.html" target="_self" class="nav_link">Course Registration</a>
-					</li>
-
-					<li id="po" class="columnFlexBox navigation_menu_item">
-						<a href="../10_paymentOptions/paymentOptions.html" target="_self" class="nav_link">Payment Options</a>
-					</li>
-
-					<li id="pd" class="columnFlexBox navigation_menu_item">
-						<a href="../11_printExamDocket/printExamDocket.html" target="_self" class="nav_link">Print Exam Docket</a>
-					</li>
-
-					<li id="lo" class="columnFlexBox navigation_menu_item">
-						<a href="../0_login/login.html" target="_self" class="nav_link">Logout</a>
-					</li>
-
-		</ul>
-				
-	</div>
-
-	<div id="main_content_container">
-		
-		<div id="collapsible_welcome_msg_container">
+			</div>
 			
-			<svg viewBox="0 0 400 35" preserveAspectRatio="none" id="collapsible_hundle">
-				
-				<defs>
-					<style>.arrow{fill:#fff;
-								  transform-origin: center;}</style>
-					<style>.cls-2{fill:#6297c3;}</style>
-				</defs>
+			<ul id="navigation_panel">
 
-				<path class="cls-2" d="M400,35.5c0-6.2,0-12.5-16-11.6H234.7C222.6,20.3,223-.3,200-.3s-22.6,20.6-34.7,24.2H16C0,24.1,0,30.1,0,35.5Z"/>
-				<path id="collapsible_hundle_arrow" class="arrow" d="M207.7,9.6l-6.3,6.6a1.7,1.7,0,0,1-2.8,0l-6.3-6.6c-2.1-2.3-5,.7-2.9,3l9.2,9.7a1.8,1.8,0,0,0,2.8,0l9.2-9.7C212.7,10.3,209.8,7.3,207.7,9.6Z" />
-	
-			</svg>
+						<li id="hm" class="columnFlexBox navigation_menu_item">
+							<a target="_self" class="nav_link">Home</a>
+						</li>
+
+						<li id="pi" class="columnFlexBox navigation_menu_item">
+							<a href="../2_personalInformation/personalInformation.html" target="_self" class="nav_link">Personal Information</a>
+						</li>
+
+						<li id="aa" class="columnFlexBox navigation_menu_item">
+							<a href="../3_applyForAccommodation/applyForAccommodation.html" target="_self" class="nav_link">Apply for Accommodation</a>
+						</li>
+
+						<li id="vc" class="columnFlexBox navigation_menu_item">
+							<a href="../4_viewCA/viewCA.html" target="_self" class="nav_link">View CA</a>
+						</li>
+
+						<li id="gr" class="columnFlexBox navigation_menu_item">
+							<a href="../5_grades/grades.html" target="_self" class="nav_link">Grades</a>
+						</li>
+
+						<li id="py" class="columnFlexBox navigation_menu_item">
+							<a href="../6_payments/payments.html" target="_self" class="nav_link">Payments</a>
+						</li>
+
+						<li id="tt" class="columnFlexBox navigation_menu_item">
+							<a href="../7_timetable/timetable.html" target="_self" class="nav_link">Time Table</a>
+						</li>
+
+						<li id="ce" class="columnFlexBox navigation_menu_item">
+							<a href="../8_courseEvaluation/courseEvaluation.html" target="_self" class="nav_link">Course Evaluation</a>
+						</li>
+
+						<li id="cr" class="columnFlexBox navigation_menu_item">
+							<a href="../9_courseRegistration/courseRegistration.html" target="_self" class="nav_link">Course Registration</a>
+						</li>
+
+						<li id="po" class="columnFlexBox navigation_menu_item">
+							<a href="../10_paymentOptions/paymentOptions.html" target="_self" class="nav_link">Payment Options</a>
+						</li>
+
+						<li id="pd" class="columnFlexBox navigation_menu_item">
+							<a href="../11_printExamDocket/printExamDocket.html" target="_self" class="nav_link">Print Exam Docket</a>
+						</li>
+
+						<li id="lo" class="columnFlexBox navigation_menu_item">
+							<a href="../0_login/login.html" target="_self" class="nav_link">Logout</a>
+						</li>
+
+			</ul>
+					
+		</div>
+
+		<div id="main_content_container">
 			
-			<div id="welcome_msg_container">
+			<div id="collapsible_welcome_msg_container">
 				
-				<header id="welcome_msg_header">
-				ONLINE APPLICATION AND REGISTRAION
-				</header>
+				<svg viewBox="0 0 400 35" preserveAspectRatio="none" id="collapsible_hundle">
+					
+					<defs>
+						<style>.arrow{fill:#fff;
+									transform-origin: center;}</style>
+						<style>.cls-2{fill:#6297c3;}</style>
+					</defs>
+
+					<path class="cls-2" d="M400,35.5c0-6.2,0-12.5-16-11.6H234.7C222.6,20.3,223-.3,200-.3s-22.6,20.6-34.7,24.2H16C0,24.1,0,30.1,0,35.5Z"/>
+					<path id="collapsible_hundle_arrow" class="arrow" d="M207.7,9.6l-6.3,6.6a1.7,1.7,0,0,1-2.8,0l-6.3-6.6c-2.1-2.3-5,.7-2.9,3l9.2,9.7a1.8,1.8,0,0,0,2.8,0l9.2-9.7C212.7,10.3,209.8,7.3,207.7,9.6Z" />
+		
+				</svg>
 				
-				You are using our student information management system: <b>EduRole</b>. Where you can register your courses, see your grades and much more in the near future.
+				<div id="welcome_msg_container">
+					
+					<header id="welcome_msg_header">
+					ONLINE APPLICATION AND REGISTRAION
+					</header>
+					
+					You are using our student information management system: <b>EduRole</b>. Where you can register your courses, see your grades and much more in the near future.
 
-				<br>
+					<br>
 
-				This platform allows students and staff access to information relevant to them. Incase you run into any problems please contact ICT support in the library or Computer lab. You may also open a help-desk ticket through the menu
+					This platform allows students and staff access to information relevant to them. Incase you run into any problems please contact ICT support in the library or Computer lab. You may also open a help-desk ticket through the menu
 
-				<header>
-					to all new 2022/2023 students. Best of luck!
-				</header>
-									
-				<br>
+					<header>
+						to all new 2022/2023 students. Best of luck!
+					</header>
+										
+					<br>
 
-				<i>-ICT Department - Admin</i>
-				
-				<div id="options_container" class="columnFlexBox">
+					<i>-ICT Department - Admin</i>
+					
+					<div id="options_container" class="columnFlexBox">
 
-							<div id="options" class="rowFlexBox">
+								<div id="options" class="rowFlexBox">
 
-								<div id="libraryContainer" class="columnFlexBox optionCard">
-									<img src="../../images/home/library.png" class="icon">
-									Library
+									<div id="libraryContainer" class="columnFlexBox optionCard">
+										<img src="../../images/home/library.png" class="icon">
+										Library
+									</div>
+
+									<div id="gradesContainer" class="columnFlexBox optionCard">
+										<img src="../../images/home/grades.png" class="icon">
+										Grades
+									</div>
+
+									<div id="calendarContainer" class="columnFlexBox optionCard">
+										<img src="../../images/home/calendar.png" class="icon">
+										Calendar
+									</div>
+
+									<div id="filesContainer" class="columnFlexBox optionCard">
+										<img src="../../images/home/files.png" class="icon">
+										Files
+									</div>
+
+									<div id="assignmentsContainer" class="columnFlexBox optionCard">
+										<img src="../../images/home/assignments.png" class="icon">
+										Assignments
+									</div>
+
+									<div id="paymentsContainer" class="columnFlexBox optionCard">
+										<img src="../../images/home/payments.png" class="icon">
+										Payments
+									</div>
+
+									<div id="helpContainer" class="columnFlexBox optionCard">
+										<img src="../../images/home/help.png" class="icon">
+										Help
+									</div>
+
 								</div>
 
-								<div id="gradesContainer" class="columnFlexBox optionCard">
-									<img src="../../images/home/grades.png" class="icon">
-									Grades
-								</div>
+					</div>
 
-								<div id="calendarContainer" class="columnFlexBox optionCard">
-									<img src="../../images/home/calendar.png" class="icon">
-									Calendar
-								</div>
-
-								<div id="filesContainer" class="columnFlexBox optionCard">
-									<img src="../../images/home/files.png" class="icon">
-									Files
-								</div>
-
-								<div id="assignmentsContainer" class="columnFlexBox optionCard">
-									<img src="../../images/home/assignments.png" class="icon">
-									Assignments
-								</div>
-
-								<div id="paymentsContainer" class="columnFlexBox optionCard">
-									<img src="../../images/home/payments.png" class="icon">
-									Payments
-								</div>
-
-								<div id="helpContainer" class="columnFlexBox optionCard">
-									<img src="../../images/home/help.png" class="icon">
-									Help
-								</div>
-
-							</div>
-
+					
 				</div>
-
 				
 			</div>
 			
 		</div>
-		
+
 	</div>
 
 </body>
