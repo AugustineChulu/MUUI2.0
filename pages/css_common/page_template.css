@@ -1,0 +1,235 @@
+	:root {
+	--radius: 10px;
+	--radius2: 20px;
+	--blur: 3px;
+}
+	
+	body {
+		height: 100%;
+		width: 100vw;
+		margin: 0;
+		font-family: roboto;
+		font-size: 0.8rem;
+		background-color: #6297c3;
+
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 10% 5% 85%;
+	}
+
+	.columnFlexBox {
+		display: flex;
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-flow: column nowrap;
+	}
+
+	.rowFlexBox {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+/*REFERENCE CODE FOR LONG SCREENS || PHONES */
+
+/* top level containers */
+	#header_container {
+		grid-row: 1/2;
+		height: 100%;
+		width: 100%;
+		
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 70% 30%;
+	}
+
+	#page_navigation_container {
+		grid-row: 2/3;
+		height: 100%;
+		width: 100%;
+	}
+
+	#main_content_container {
+		grid-row: 3/4;
+		height: 100%;
+		width: 100%;
+		background-color: #ffffff;
+		
+		border-top-left-radius: var(--radius);
+		border-top-right-radius: var(--radius);
+	}
+	
+
+
+/* children of the header_container */
+	#mulungushiLogoImage{
+		grid-row: 1/2;
+		width: auto;
+		height: 80%;
+		place-self: center;
+	}
+	
+	#user_info{
+		color: #ffffff;
+		font-weight: bold;
+		grid-row: 2/3;
+		place-self: center;
+		padding-left: 10px;
+	}
+	
+	
+/* children of the page_navigation_container */
+	#currentPage{
+		grid-row: 2/3;
+		height: 100%;
+		width: fit-content;
+		padding: 0 0 0 10px;
+	}
+	
+	#navigation_panel {
+		display: none;
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-flow: column nowrap;
+		justify-content: space-between;
+		
+		
+		height: fit-content;
+		width: fit-content;
+		white-space: nowrap;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		left: 0;
+		list-style-type: none;
+		align-items: center;
+		background-color: #6297c3;
+		padding: 5px 10px; 
+		z-index: 1;
+		border-bottom-left-radius: var(--radius);
+		border-bottom-right-radius: var(--radius);
+		box-shadow: 2px 5px 10px #888888;
+	}
+	
+	
+/* children of the currentPage */	
+	#humMenuButton{
+		width: 20px;
+		height: 20px;
+		
+		border-style: none;
+		background-color: transparent;
+		background-image: url("http://IDEAPAD-510:8080/MUUIbeta/images/home/humMenuIcon.png");
+		margin: 0 15px 0 0;
+		background-size: 100% 100%;
+	}
+	
+	#pageTitle{
+		color: #ffffff;
+		font-weight: bold;
+		text-align: left;
+		align-self: center;
+		padding: 0 10px;
+		border-left: solid 1px #f2fafc;
+	}
+
+
+/* children of the navigation_panel */
+	.navigation_menu_item{
+		height: 35px;
+		width: 100%;
+		justify-content: center;
+		padding: 8px 0;
+	}
+	
+	.nav_link{
+		height: 100%;
+		
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: start;
+		flex-grow: 0;
+		flex-shrink: 0;
+		
+		font-weight: bold;
+		color: #ffffff;
+		text-decoration: none;
+	}
+	
+	#lo{
+		border-top: solid 1px #fff ;
+	}
+
+
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  TABLETS */
+
+@media only screen and (min-width: 600px)
+{
+
+	
+}
+
+
+
+
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  LAPTOPS */
+
+@media only screen and (min-width: 950px)
+{
+	
+	body {
+		font-size: 1rem;
+		grid-template-columns: 15% 85%;
+		grid-template-rows: 15% 85%;
+	}
+	
+	#header_container {
+		grid-column: 1/3;
+	}
+
+	#page_navigation_container {
+		grid-column: 1/2;
+	}
+
+	#main_content_container {
+		grid-row: 2/3;
+		grid-column: 2/3;
+		
+		border-top-left-radius: var(--radius);
+		border-top-right-radius: 0;
+	}
+	
+	#currentPage {
+		display: none;
+	}
+	
+	#navigation_panel {
+		display: flex;
+		position: static;
+		white-space: wrap;
+		height: 100%;
+		width: 100%;
+		box-sizing: border-box;
+		box-shadow: none;
+		padding: 0 5px;
+		background-color: transparent;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	
+	.navigation_menu_item{
+		height: 7%;
+		border-radius: var(--radius);
+		box-sizing: border-box;
+		padding: 0 10px;
+	}
+	
+	#lo{
+		border-top: none;
+	}
+
+}

@@ -1,0 +1,425 @@
+:root {
+	--radius: 10px;
+	--blur: 3px;
+}
+
+@font-face {
+		font-family: my_roboto;
+		src: url("../../fonts/Roboto-Regular.ttf");
+	}
+
+	body {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		font-family: my_roboto;
+		font-size: 0.85rem;
+		background-color: #ffffff;
+	}
+	
+	.columnFlexBox {
+		display: flex;
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-flow: column nowrap;
+	}
+
+	.rowFlexBox {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+/*REFERENCE CODE FOR LONG SCREENS || PHONES */
+
+/* top level containers */
+	#login_and_redirects_container{
+		height: 60%;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 25% 75%;
+		background-image: url("http://localhost:8080/MUUIbeta/images/login/MUlibrarySquare.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-blend-mode: soft-light;
+		background-color: rgba(98,151,195,0.8);
+
+		border-bottom-left-radius: var(--radius);
+		border-bottom-right-radius: var(--radius);
+	}
+
+	#registration_and_preferences_container{
+		height: 40%;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 80% 20%;
+	}
+
+/* children of the top level login_redirects_container */
+	#redirects_container{
+		grid-row: 1/2;
+		height: 100%;
+		width: 95%;
+		border-bottom-left-radius: var(--radius);
+		border-bottom-right-radius: var(--radius);
+		justify-self: center;
+
+		border: solid 1px;
+		border-top: none;
+		border-color: rgba(255,255,255,0.5);
+		background-color: rgba(98,151,195,0.7);
+		backdrop-filter: blur(var(--blur));
+
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 70% 30%;
+	}
+
+	#login_container{
+		grid-row: 2/3;
+		height: 90%;
+		width: 95%;
+		place-self: center;
+		border-radius: var(--radius);
+		background: rgba(255,255,255,0.7);
+		backdrop-filter: blur(var(--blur));
+
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 15% 75% 10%;
+	}
+
+
+/* children of the top level registration_preferences_container */
+	#registration_container{
+		grid-row: 1/2;
+		height: 100%;
+		width: 90%;
+		justify-self: center;
+
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 60% 40%;
+	}
+
+	#preferences_container{
+		grid-row: 2/3;
+		height: 100%;
+		width: 100%;
+
+		background-color: rgb(230,230,230);
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 30% 40% 30%;
+	}
+
+/* children of the registration contianer */
+	#welcome_text{
+		grid-row: 1/2;
+		height: fit-content;
+		width: fit-content;
+		text-align: center;
+		place-self: center;
+	}
+
+	#application_buttons_container{
+		grid-row: 2/3;
+		height: 80%;
+		width: 100%;
+		align-self: center;
+
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 50% 50%;
+	}
+
+	#welcome_text_header{
+		display: block;
+		font-weight: bolder;
+		padding: 2% 0;
+	}
+
+/* children of the application_buttons_container */
+	#application_opt1{
+		font-size: 1em;
+		font-weight: bold;
+		grid-row: 1/2;
+		height: 90%;
+		width: 90%;
+		place-self: center;
+
+		background-color: rgba(98,151,195,0.8);
+		border-style: none;
+		color: #ffffff;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+	}
+
+	#application_opt2{
+		font-size: 1em;
+		font-weight: bold;
+		grid-row: 2/3;
+		height: 90%;
+		width: 90%;
+		place-self: center;
+
+		background-color: rgba(205,72,55,0.8);
+		border-style: none;
+		color: #ffffff;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+
+/* children of the redirects_container */
+	#mulungushiLogoImage{
+		grid-row: 1/2;
+		width: auto;
+		height: 60%;
+		place-self: center;
+	}
+
+	#redirect_links{
+		grid-row: 2/3;
+		height: 90%;
+		width: 95%;
+		justify-self: center;
+		margin: 0;
+		padding: 0;
+
+		display: flex;
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-flow: row nowrap;
+	}
+
+	#link1, #link2, #link3, #link4 {
+		color: #ffffff;
+		flex-grow: 1;
+		height: 50%;
+		text-align: center;
+		align-self: center;
+		justify-content: center;
+	}
+
+	#link2 {
+		border-left: solid #ffffff 1px;
+	}
+
+	#link3 {
+		border-right: solid #ffffff 1px;
+		border-left: solid #ffffff 1px;
+	}
+
+
+/* children of the login_container */
+	#login_container_header{
+		grid-row: 1/2;
+		width: fit-content;
+		height: fit-content;
+		place-self: center;
+
+		font-weight: bolder;
+	}
+
+	#login_form{
+		grid-row: 2/3;
+		width: 80%;
+		height: 100%;
+		justify-self: center;
+
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(3, 1fr);
+		
+		border-radius: var(--radius);
+		background-color: #ffffff;
+	}
+
+	#login_container_footer{
+		grid-row: 3/4;
+		width: fit-content;
+		height: fit-content;
+		justify-self: left;
+		align-self:self-end;
+		color: rgb(0, 206, 255);
+
+		padding: 0 0 8px 15px;
+	}
+
+
+/* children of the login_form */
+	#username_container{
+		grid-row: 1/2;
+		width: 80%;
+		height: fit-content;
+		place-self: center;
+	}
+
+	#password_container{
+		grid-row: 2/3;
+		width: 80%;
+		height: fit-content;
+		place-self: center;
+	}
+
+	#login_button{
+		grid-row: 3/4;
+		width: fit-content;
+		height: fit-content;
+		place-self: center;
+
+		padding: 3%;
+		color: #ffffff;
+		font-weight: bolder;
+		border-radius: 6px;
+		background-color: rgba(106,157,199,0.7);
+		font-size: 1em;
+	}
+
+	label{
+		display: block;
+		margin: 0 auto;
+		width: fit-content;
+		font-weight: bold;
+	}
+
+	input {
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+		border: none;
+		border-bottom: solid 2px #6a9dc7;
+		box-sizing: border-box;
+		padding: 5% 5% 0 5%;
+	}
+	
+	input:focus{
+		outline: none;
+	}
+
+
+/* children of the preferences_container */
+	#language_selector_container{
+		grid-row: 1/2;
+		width: fit-content;
+		height: fit-content;
+		justify-self: right;
+		align-self: center;
+
+		display: flex;
+		flex-flow: row nowrap;
+		padding-right: 5px;
+	}
+
+	#preferences_container_footer{
+		grid-row: 3/4;
+		width: fit-content;
+		height: fit-content;
+		justify-self: left;
+		align-self: center;
+		padding-left: 5px;
+
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	#change {
+		white-space: nowrap;
+		flex-grow: 1;
+		height: 100%;
+		color: #000000;
+		box-sizing: border-box;
+		padding: 0 2% 0 0;
+	}
+
+	#select_container {
+		width: fit-content;
+	}
+
+	#select_button {
+		font-size: 1em;
+		width: fit-content;
+		border: none;
+		padding: 0 1px;
+		border-left: solid #555555 2px;
+		background-color: rgba(98,151,195,0.3);
+		border-top-right-radius: var(--radius);
+		border-bottom-right-radius: var(--radius);
+	}
+	
+	#select_button:focus{
+		outline: none;
+	}
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  TABLETS */
+
+@media only screen and (min-width: 600px)
+{
+
+	#redirects_container, #login_container {
+		width: 60%;
+	}
+
+	#application_opt1, #application_opt2{
+		width: 60%;
+	}
+	
+	#registration_container{
+		grid-template-rows: 70% 30%;
+	}
+	
+}
+
+
+
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  LAPTOPS */
+
+@media only screen and (min-width: 950px)
+{
+	
+	body{
+		font-size: 1rem;
+	}
+
+	#redirects_container, #login_container {
+		width: 90%;
+	}
+
+	#application_opt1, #application_opt2{
+		width: 70%;
+	}
+
+	#login_and_redirects_container{
+		height: 100%;
+		width: 50%;
+		border-radius: 0;
+		float: left;
+	}
+
+	#registration_and_preferences_container{
+		height: 100%;
+		width: 50%;
+		float: right;
+		grid-template-rows: 90% 10%;
+	}
+
+	#login_form{
+		width: 70%;
+	}
+	
+	#registration_container{
+		grid-template-rows: 85% 15%;
+	}
+
+	#preferences_container{
+		grid-template-rows: 20% 60% 20%;
+	}
+	
+	input{
+		font-size: 1rem;
+		width: 70%;
+	}
+
+}
+
