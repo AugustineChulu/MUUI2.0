@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
 
 	<title>login</title>
 
@@ -8,9 +9,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="login.css">
 
-	<meta charset="utf-8">
-
-	<meta name="viewport" content="initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
@@ -50,26 +49,26 @@
 
 				<span id="login_container_header">STUDENT AND STAFF LOGIN</span>
 
-				<form id="login_form" action="LoginServlet">
+				<form id="login_form">
 
 					<div id="username_container">
 
-						<label for="username">
+						<label for="unField">
 						Username/Student ID
 						</label>
 
-						<input type="text" id="unField" name="username" required>
+						<input type="text" title="username" id="unField" name="username" required autocomplete="true">
 
 					</div>
 
 
 					<div id="password_container">
 
-						<label for="password">
+						<label for="pwField">
 						Password
 						</label>
 
-						<input type="password" id="pwField" name="password" required>
+						<input type="password" title="password" id="pwField" name="password" required autocomplete="true">
 
 					</div>
 
@@ -120,7 +119,7 @@
 					</span>
 
 					<div id="select_container">
-						<select id="select_button">
+						<select id="select_button" title="language_selector">
 							<option value="0">English</option>
 							<option value="1">Spanish</option>
 							<option value="2">French</option>
