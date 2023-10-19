@@ -6,7 +6,7 @@
 
 	<link rel="icon" type="image/x-icon" href="http://localhost:8080/MUUIbeta/images/favicon.png">
 	
-	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="https://augustinechulu.github.io/MUUI2.0/pages/0_login/login.css">
 
 	<meta charset="utf-8">
 
@@ -16,129 +16,133 @@
 
 <body>
 
-<div id="login_and_redirects_container">
+	<div id="main_container">
 
-	<div id="redirects_container">
+		<div id="login_and_redirects_container">
 
-		<img alt="MU logo" src="http://localhost:8080/MUUIbeta/images/login/MUlogo.png" id="mulungushiLogoImage">
+			<div id="redirects_container">
 
-		<ul id="redirect_links" class="rowFlexBox">
+				<img alt="MU logo" src="http://localhost:8080/MUUIbeta/images/login/MUlogo.png" id="mulungushiLogoImage">
 
-			<li id="link1" class="columnFlexBox">
-				School Website
-			</li>
+				<ul id="redirect_links" class="rowFlexBox">
 
-			<li id="link2" class="columnFlexBox">
-				e learning Portal
-			</li>
+					<li id="link1" class="columnFlexBox">
+						School Website
+					</li>
 
-			<li id="link3" class="columnFlexBox">
-				Staff Mail
-			</li>
+					<li id="link2" class="columnFlexBox">
+						e learning Portal
+					</li>
 
-			<li id="link4" class="columnFlexBox">
-				EDU Mail
-			</li>
+					<li id="link3" class="columnFlexBox">
+						Staff Mail
+					</li>
 
-		</ul>
+					<li id="link4" class="columnFlexBox">
+						EDU Mail
+					</li>
 
-	</div>
+				</ul>
 
-	<div id="login_container">
+			</div>
 
-		<span id="login_container_header">STUDENT AND STAFF LOGIN</span>
+			<div id="login_container">
 
-		<form id="login_form" method="post" action="LoginServlet">
+				<span id="login_container_header">STUDENT AND STAFF LOGIN</span>
 
-			<div id="username_container">
+				<form id="login_form" method="post" action="LoginServlet">
 
-				  <label for="username">
-				  Username/Student ID
-				  </label>
+					<div id="username_container">
 
-				  <input type="text" id="unField" name="username" required>
+						<label for="username">
+						Username/Student ID
+						</label>
 
-			  </div>
+						<input type="text" id="unField" name="username" required>
+
+					</div>
 
 
-			  <div id="password_container">
+					<div id="password_container">
 
-				  <label for="password">
-				  Password
-				  </label>
+						<label for="password">
+						Password
+						</label>
 
-				  <input type="password" id="pwField" name="password" required>
+						<input type="password" id="pwField" name="password" required>
 
-			  </div>
+					</div>
 
-			  <input type="submit" value=" Log in " id="login_button">
+					<input type="submit" value=" Log in " id="login_button">
 
-		</form>
+				</form>
 
-		<span id="login_container_footer">forgot your password?</span>
+				<span id="login_container_footer">forgot your password?</span>
 
-	</div>
-
-</div>
-
-<div id="registration_and_preferences_container">
-
-	<div id="registration_container">
-
-		<span id="welcome_text">
-
-			<span id="welcome_text_header">
-				ONLINE APPLICATION AND REGISTRAION
-			</span>
-
-			Through the easy to use student portal you can complete your online registration. Students are required to register there accounts only once.
-			
-			<br>
-
-			For course registration you need to log in
-
-		</span>
-
-		<div id="application_buttons_container">
-
-			<button id="application_opt1"> Online Application Form For New Students </button>
-
-			<button id="application_opt2"> Short Course Application Form </button>
-
-		</div>
-
-	</div>
-
-	<div id="preferences_container">
-
-		<div id="language_selector_container">
-
-			<span id="change">
-					change langauge
-			</span>
-
-			<div id="select_container">
-				<select id="select_button">
-					<option value="0">English</option>
-					<option value="1">Spanish</option>
-					<option value="2">French</option>
-				</select>
 			</div>
 
 		</div>
 
-		<span id="preferences_container_footer">
-				copyright info place holder
-		</span>
-		
+		<div id="registration_and_preferences_container">
+
+			<div id="registration_container">
+
+				<span id="welcome_text">
+
+					<span id="welcome_text_header">
+						ONLINE APPLICATION AND REGISTRAION
+					</span>
+
+					Through the easy to use student portal you can complete your online registration. Students are required to register there accounts only once.
+					
+					<br>
+
+					For course registration you need to log in
+
+				</span>
+
+				<div id="application_buttons_container">
+
+					<button id="application_opt1"> Online Application Form For New Students </button>
+
+					<button id="application_opt2"> Short Course Application Form </button>
+
+				</div>
+
+			</div>
+
+			<div id="preferences_container">
+
+				<div id="language_selector_container">
+
+					<span id="change">
+							change langauge
+					</span>
+
+					<div id="select_container">
+						<select id="select_button">
+							<option value="0">English</option>
+							<option value="1">Spanish</option>
+							<option value="2">French</option>
+						</select>
+					</div>
+
+				</div>
+
+				<span id="preferences_container_footer">
+						copyright info place holder
+				</span>
+				
+			</div>
+
+		</div>
+
 	</div>
 
-</div>
-
 </body>
-
+<!--
 <script type="text/javascript" src="pages/js_common/pageScaling.js"></script>
-
+-->
 <script type="text/javascript" src="pages/0_login/js/loginPageStyle.js"></script>
 
 </html>
