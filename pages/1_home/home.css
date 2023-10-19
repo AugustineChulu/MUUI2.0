@@ -80,8 +80,6 @@ header {
 }
 
 .icon {
-	width: 60%;
-	height: auto;
 	box-sizing: border-box;
 	padding: 10%;
 	border-radius: 10px;
