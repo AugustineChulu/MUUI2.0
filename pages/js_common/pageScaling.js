@@ -7,59 +7,63 @@ let height = 0, width = 0;
 
 const attributeName = 'style';
 
+//apply window size operations if the page is loaded on a mobile device
+if ((/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) || (window.innerWidth <= 768 && window.innerHeight <= 1024)) {
 
-//method definition for setting the window height
-function parseHeightToWindow(height, width){
+    console.log('This is a mobile device.');
+
+	//method definition for setting the window height
+	function parseHeightToWindow(height, width){
 
 		let calculation = 'height:' + height + 'px; min-height:' + height + 'px; max-height:' + height + 'px;' + 
-						  'width' + width + 'px; min-width:' + width + 'px; max-width:' + width + 'px;';
-						  
+						'width' + width + 'px; min-width:' + width + 'px; max-width:' + width + 'px;';
+						
 		//console.log(width + "x" + height)
 		return calculation;
-}
+	}
 
-//window event listener for when the page is loaded initially
-window.addEventListener('DOMContentLoaded', dimensionCalculation)
+	if (screenOrientationType === 'portrait-primary' || screenOrientationType === 'portrait-secondary'){
 
-function dimensionCalculation(){
+		height = window.innerHeight;
+		width = window.innerWidth;
 
-if (screenOrientationType === 'portrait-primary' || screenOrientationType === 'portrait-secondary'){
+		//console.log('long screen in: ' + screenOrientationType);
 
-	height = window.innerHeight;
-	width = window.innerWidth;
+	}else if ((screenOrientationType === 'landscape-primary'  || screenOrientationType === 'landscape-secondary') && window.innerWidth < 950){
 
-	//console.log('long screen in: ' + screenOrientationType);
+		height = window.innerHeight * 3;
+		width = window.innerWidth;
 
-}else if ((screenOrientationType === 'landscape-primary'  || screenOrientationType === 'landscape-secondary') && window.innerWidth < 950){
+		//console.log('long screen in: ' + screenOrientationType);
 
-	height = window.innerHeight * 3;
-	width = window.innerWidth;
+	}else if ((screenOrientationType === 'landscape-primary' ||  screenOrientationType === 'landscape-secondary') && window.innerWidth > 950){
 
-	//console.log('long screen in: ' + screenOrientationType);
+		height = window.innerHeight;
+		width = window.innerWidth;
+		
+		//window event listener for screen size changes
+		window.addEventListener('resize', dimensionCalculation);
 
-}else if ((screenOrientationType === 'landscape-primary' ||  screenOrientationType === 'landscape-secondary') && window.innerWidth > 950){
+		//console.log('wide screen in: ' + screenOrientationType);
 
-	height = window.innerHeight;
-	width = window.innerWidth;
+	}else if ((screenOrientationType === 'portrait-primary' || screenOrientationType === 'portrait-secondary') && window.innerHeight < 600){
+		
+		//notify the user if the screen size is too small to correctly render the page
+		alert("this device's screen is not tall enough, for the best user experience please rotate your device and refresh the page");
+		
+	}else {
+
+		console.log(screenOrientationType);
+		alert('unexpected error due to device orientation, rotate your device and try again');
+	}
+
+	body.setAttribute(attributeName,parseHeightToWindow(height, width));	
 	
-	//window event listener for screen size changes
-	window.addEventListener('resize', dimensionCalculation);
 
-	//console.log('wide screen in: ' + screenOrientationType);
+} else {
+    console.log('This is not a mobile device.');
 
-}else if ((screenOrientationType === 'portrait-primary' || screenOrientationType === 'portrait-secondary') && window.innerHeight < 600){
-	
-	//notify the user if the screen size is too small to correctly render the page
-	alert("this device's screen is not tall enough, for the best user experience please rotate your device and refresh the page");
-	
-}else {
-
-	console.log(screenOrientationType);
-	alert('unexpected error due to device orientation, rotate your device and try again');
-}
-
-body.setAttribute(attributeName,parseHeightToWindow(height, width));	
-	
+	body.setAttribute('style','height: 100vh; min-height: 600px; width: 100vw; min-width: 360px;');
 }
 
 
