@@ -13,9 +13,8 @@
 	}
 
 	#root_container{
-		min-height: 600px;
-		width: 100vw;
-		min-width: 360px;
+		min-height: 100vh;
+		min-width: 100vw;
 		font-family: my_roboto;
 		font-size: 0.85rem;
 		background-color: #ffffff;
@@ -26,7 +25,7 @@
 
 		display: grid;
 		grid-template-columns: 100%;
-		grid-template-rows: 15% 45% 30% 1fr;
+		grid-template-rows: 15% 1fr 30% 10%;
 	}
 	
 	.columnFlexBox {
@@ -46,7 +45,6 @@
 /* top level containers */
 	#redirects_container{
 		grid-row: 1/2;
-		height: 100%;
 		width: 95%;
 		border-bottom-left-radius: var(--radius);
 		border-bottom-right-radius: var(--radius);
@@ -66,8 +64,6 @@
 
 	#login_container{
 		grid-row: 2/3;
-		height: 100%;
-		width: 100%;
 		display: grid;
 		grid-template-columns: 100%;
 		grid-template-rows: 100%;
@@ -75,8 +71,6 @@
 
 	#registration_container{
 		grid-row: 3/4;
-		height: 100%;
-		width: 100%;
 		display: grid;
 		grid-template-columns: 100%;
 		grid-template-rows: 100%;
@@ -88,8 +82,6 @@
 
 	#page_footer{
 		grid-row: 4/5;
-		height: 100%;
-		width: 100%;
 
 		background-color: rgb(230,230,230);
 		display: grid;
