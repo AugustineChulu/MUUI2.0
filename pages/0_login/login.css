@@ -421,7 +421,7 @@
 		grid-row: 3/4;
 		width: 60%;
 		justify-self: start;
-		background: rgba(255,255,255,0.7);
+		background: rgba(255,255,255,0.8);
 		-webkit-backdrop-filter: blur(var(--blur));
 		backdrop-filter: blur(var(--blur));
 
