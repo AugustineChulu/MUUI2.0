@@ -20,6 +20,7 @@
 		font-family: my_roboto;
 		font-size: 0.85rem;
 		background-color: #ffffff;
+		overflow-y: scroll;
 
 		
 		background-image: url("../../images/login/MUlibrarySquare.jpg");

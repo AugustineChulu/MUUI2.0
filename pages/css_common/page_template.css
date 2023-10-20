@@ -21,6 +21,7 @@
 		font-family: my_roboto;
 		font-size: 0.8rem;
 		background-color: #6297c3;
+		overflow-y: scroll;
 
 		display: grid;
 		grid-template-columns: 100%;
