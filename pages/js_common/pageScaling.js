@@ -15,8 +15,7 @@ if ((/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	//method definition for setting the window height
 	function parseHeightToWindow(height, width){
 
-		let calculation = 'height:' + height + 'px; min-height:' + height + 'px; max-height:' + height + 'px;' + 
-						'width' + width + 'px; min-width:' + width + 'px; max-width:' + width + 'px;';
+		let calculation = 'min-height:' + height + 'px;' + ' min-width:' + width + 'px;';
 						
 		//console.log(width + "x" + height)
 		return calculation;

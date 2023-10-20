@@ -13,9 +13,9 @@
 	}
 
 	#root_container{
-		height: 100%;
+		height: 100vh;
 		min-height: 600px;
-		width: 100%;
+		width: 100vw;
 		min-width: 360px;
 		font-family: my_roboto;
 		font-size: 0.85rem;
