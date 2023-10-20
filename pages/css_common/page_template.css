@@ -14,9 +14,10 @@
 	}
 
 	#root_container{
-		position: fixed;
 		height: 100vh;
+		min-height: 600px;
 		width: 100vw;
+		min-width: 360px;
 		font-family: my_roboto;
 		font-size: 0.8rem;
 		background-color: #6297c3;

@@ -13,12 +13,22 @@
 	}
 
 	#root_container{
-		position: fixed;
 		height: 100vh;
+		min-height: 600px;
 		width: 100vw;
+		min-width: 360px;
 		font-family: my_roboto;
 		font-size: 0.85rem;
 		background-color: #ffffff;
+
+		
+		background-image: url("../../images/login/MUlibrarySquare.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 15% 45% 30% 10%;
 	}
 	
 	.columnFlexBox {
@@ -36,31 +46,6 @@
 /*REFERENCE CODE FOR LONG SCREENS || PHONES */
 
 /* top level containers */
-	#login_and_redirects_container{
-		height: 60%;
-		width: 100%;
-		display: grid;
-		grid-template-columns: 100%;
-		grid-template-rows: 25% 75%;
-		background-image: url("../../images/login/MUlibrarySquare.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-blend-mode: soft-light;
-		background-color: rgba(98,151,195,0.8);
-
-		border-bottom-left-radius: var(--radius);
-		border-bottom-right-radius: var(--radius);
-	}
-
-	#registration_and_preferences_container{
-		height: 40%;
-		width: 100%;
-		display: grid;
-		grid-template-columns: 100%;
-		grid-template-rows: 80% 20%;
-	}
-
-/* children of the top level login_redirects_container */
 	#redirects_container{
 		grid-row: 1/2;
 		height: 100%;
@@ -78,11 +63,44 @@
 
 		display: grid;
 		grid-template-columns: 100%;
-		grid-template-rows: 70% 30%;
+		grid-template-rows: 50% 50%;
 	}
 
 	#login_container{
 		grid-row: 2/3;
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 100%;
+	}
+
+	#registration_container{
+		grid-row: 3/4;
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 100%;
+		background-color: #fff;
+
+		border-top-left-radius: var(--radius);
+		border-top-right-radius: var(--radius);
+	}
+
+	#page_footer{
+		grid-row: 4/5;
+		height: 100%;
+		width: 100%;
+
+		background-color: rgb(230,230,230);
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 30% 40% 30%;
+	}
+
+/* children of the top level login_container */
+	#login_field{
 		height: 90%;
 		width: 95%;
 		place-self: center;
@@ -93,12 +111,12 @@
 
 		display: grid;
 		grid-template-columns: 100%;
-		grid-template-rows: 15% 75% 10%;
+		grid-template-rows: 10% 1fr 15%;
 	}
 
 
-/* children of the top level registration_preferences_container */
-	#registration_container{
+/* children of the top level registration_container */
+	#registration_field{
 		grid-row: 1/2;
 		height: 100%;
 		width: 90%;
@@ -109,24 +127,14 @@
 		grid-template-rows: 60% 40%;
 	}
 
-	#preferences_container{
-		grid-row: 2/3;
-		height: 100%;
-		width: 100%;
-
-		background-color: rgb(230,230,230);
-		display: grid;
-		grid-template-columns: 100%;
-		grid-template-rows: 30% 40% 30%;
-	}
-
-/* children of the registration contianer */
+/* children of the registration_field */
 	#welcome_text{
 		grid-row: 1/2;
 		height: fit-content;
-		width: fit-content;
+		width: 90%;
 		text-align: center;
-		place-self: center;
+		justify-self: center;
+		align-self: start;
 	}
 
 	#application_buttons_container{
@@ -143,7 +151,7 @@
 	#welcome_text_header{
 		display: block;
 		font-weight: bolder;
-		padding: 2% 0;
+		padding: 3% 0;
 	}
 
 /* children of the application_buttons_container */
@@ -181,44 +189,40 @@
 	#mulungushiLogoImage{
 		grid-row: 1/2;
 		width: auto;
-		height: 60%;
+		height: 80%;
 		place-self: center;
 	}
 
 	#redirect_links{
 		grid-row: 2/3;
-		height: 90%;
+		height: 100%;
 		width: 95%;
 		justify-self: center;
 		margin: 0;
 		padding: 0;
+		box-sizing: border-box;
+		padding: 3px;
 
 		display: flex;
 		flex-grow: 0;
 		flex-shrink: 0;
-		flex-flow: row nowrap;
+		flex-flow: row wrap;
+		justify-content: center;
+		justify-content: space-around;
+		align-items: center;
 	}
 
 	#link1, #link2, #link3, #link4 {
 		color: #ffffff;
-		flex-grow: 1;
-		height: 50%;
+		height: 40%;
 		text-align: center;
-		align-self: center;
 		justify-content: center;
+		padding: 0 10px;
+		background-color: rgba(255, 255, 255, 0.2);
+		border-radius: var(--radius);
 	}
 
-	#link2 {
-		border-left: solid #ffffff 1px;
-	}
-
-	#link3 {
-		border-right: solid #ffffff 1px;
-		border-left: solid #ffffff 1px;
-	}
-
-
-/* children of the login_container */
+/* children of the login_field */
 	#login_container_header{
 		grid-row: 1/2;
 		width: fit-content;
@@ -305,7 +309,7 @@
 	}
 
 
-/* children of the preferences_container */
+/* children of the page_footer */
 	#language_selector_container{
 		grid-row: 1/2;
 		width: fit-content;
@@ -362,16 +366,16 @@
 @media only screen and (min-width: 600px)
 {
 
-	#redirects_container, #login_container {
+	#redirects_container, #login_field {
 		width: 60%;
+	}
+
+	#application_buttons_container{
+		height: 60%;
 	}
 
 	#application_opt1, #application_opt2{
 		width: 60%;
-	}
-	
-	#registration_container{
-		grid-template-rows: 70% 30%;
 	}
 	
 }
@@ -386,40 +390,65 @@
 	
 	#root_container{
 		font-size: 1rem;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 1fr 15% 50% 1fr 10%;
+		background-image: url("../../images/login/MUlibraryWide.jpg");
+		-webkit-backdrop-filter: blur(var(--blur));
+		backdrop-filter: blur(var(--blur));
 	}
 
-	#redirects_container, #login_container {
-		width: 90%;
-	}
-
-	#application_opt1, #application_opt2{
-		width: 70%;
-	}
-
-	#login_and_redirects_container{
+	#redirects_container{
+		grid-row: 2/3;
+		grid-column: 1/3;
 		height: 100%;
-		width: 50%;
+		width: 60%;
+		grid-template-rows: 60% 40%;
+		border: none;
+
 		border-radius: 0;
-		float: left;
+		border-top-left-radius: var(--radius);
+		border-top-right-radius: var(--radius);
 	}
 
-	#registration_and_preferences_container{
-		height: 100%;
-		width: 50%;
-		float: right;
-		grid-template-rows: 90% 10%;
+	#login_container{
+		grid-column: 1/2;
+		grid-row: 3/4;
+		width: 60%;
+		justify-self: end;
 	}
 
-	#login_form{
+	#registration_container{
+		grid-column: 2/3;
+		grid-row: 3/4;
+		width: 60%;
+		justify-self: start;
+		background: rgba(255,255,255,0.7);
+		-webkit-backdrop-filter: blur(var(--blur));
+		backdrop-filter: blur(var(--blur));
+
+		border-radius: 0;
+		border-bottom-right-radius: var(--radius);
+	}
+
+	#page_footer{
+		grid-column: 1/3;
+		grid-row: 5/6;
+	}
+
+	#redirect_links{
 		width: 70%;
 	}
-	
-	#registration_container{
-		grid-template-rows: 85% 15%;
+
+	#login_field{
+		height: 100%;
+		width: 100%;
+
+		border-radius: 0;
+		border-bottom-left-radius: var(--radius);
 	}
 
-	#preferences_container{
-		grid-template-rows: 20% 60% 20%;
+	#link1, #link2, #link3, #link4 {
+		height: 70%;
 	}
 	
 	input{
@@ -427,5 +456,8 @@
 		width: 70%;
 	}
 
-}
+	#application_opt1, #application_opt2{
+		width: 90%;
+	}
 
+}
