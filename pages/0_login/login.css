@@ -379,8 +379,6 @@
 {
 	
 	#root_container{
-		min-height: 600px;
-		min-width: 360px;
 		font-size: 1rem;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 1fr 15% 50% 1fr 10%;
