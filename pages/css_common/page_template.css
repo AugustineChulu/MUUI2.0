@@ -14,9 +14,8 @@
 	}
 
 	#root_container{
-		min-height: 600px;
-		width: 100vw;
-		min-width: 360px;
+		min-height: 100vh;
+		min-width: 100vw;
 		font-family: my_roboto;
 		font-size: 0.8rem;
 		background-color: #6297c3;
@@ -193,6 +192,8 @@
 {
 	
 	#root_container {
+		min-height: 600px;
+		min-width: 360px;
 		font-size: 1rem;
 		grid-template-columns: 15% 85%;
 		grid-template-rows: 15% 85%;
