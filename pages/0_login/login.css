@@ -82,6 +82,10 @@
 
 	#page_footer{
 		grid-row: 4/5;
+		width: 100%;
+		justify-self: center;
+		box-sizing: border-box;
+		padding: 2px;
 
 		background-color: rgb(230,230,230);
 		display: grid;
@@ -107,10 +111,9 @@
 
 /* children of the top level registration_container */
 	#registration_field{
-		grid-row: 1/2;
 		height: 100%;
 		width: 90%;
-		justify-self: center;
+		place-self: center;
 
 		display: grid;
 		grid-template-columns: 100%;
@@ -123,8 +126,7 @@
 		height: fit-content;
 		width: 100%;
 		text-align: center;
-		justify-self: center;
-		align-self: start;
+		align-self: center;
 	}
 
 	#application_buttons_container{
@@ -149,7 +151,7 @@
 		font-size: 1em;
 		font-weight: bold;
 		grid-row: 1/2;
-		height: 90%;
+		height: fit-content;
 		width: 100%;
 		place-self: center;
 
@@ -157,6 +159,7 @@
 		border-style: none;
 		color: #ffffff;
 		padding: 10px 0;
+		margin-bottom: 2px;
 		overflow: wrap;
 		border-top-right-radius: 10px;
 		border-top-left-radius: 10px;
@@ -166,7 +169,7 @@
 		font-size: 1em;
 		font-weight: bold;
 		grid-row: 2/3;
-		height: 90%;
+		height: fit-content;
 		width: 100%;
 		place-self: center;
 
@@ -174,6 +177,7 @@
 		border-style: none;
 		color: #ffffff;
 		padding: 10px 0;
+		margin-top: 2px;
 		border-bottom-right-radius: 10px;
 		border-bottom-left-radius: 10px;
 	}
@@ -255,14 +259,14 @@
 /* children of the login_form */
 	#username_container{
 		grid-row: 1/2;
-		width: 80%;
+		width: 70%;
 		height: fit-content;
 		place-self: center;
 	}
 
 	#password_container{
 		grid-row: 2/3;
-		width: 80%;
+		width: 70%;
 		height: fit-content;
 		place-self: center;
 	}
@@ -292,7 +296,7 @@
 	input {
 		display: block;
 		margin: 0 auto;
-		width: 80%;
+		width: 100%;
 		border: none;
 		border-bottom: solid 2px #6a9dc7;
 		box-sizing: border-box;
@@ -388,7 +392,7 @@
 	#root_container{
 		font-size: 1rem;
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 1fr 15% 50% 1fr 10%;
+		grid-template-rows: 1fr 15% 50% 15% 1fr;
 		background-image: url("../../images/login/MUlibraryWide.jpg");
 		-webkit-backdrop-filter: blur(var(--blur));
 		backdrop-filter: blur(var(--blur));
@@ -408,13 +412,6 @@
 	}
 
 	#login_container{
-		grid-column: 1/2;
-		grid-row: 3/4;
-		width: 60%;
-		justify-self: end;
-	}
-
-	#registration_container{
 		grid-column: 2/3;
 		grid-row: 3/4;
 		width: 60%;
@@ -424,33 +421,58 @@
 		backdrop-filter: blur(var(--blur));
 
 		border-radius: 0;
-		border-bottom-right-radius: var(--radius);
+	}
+
+	#registration_container{
+		grid-column: 1/2;
+		grid-row: 3/4;
+		width: 60%;
+		justify-self: end;
+		background: rgba(255,255,255,0.8);
+		-webkit-backdrop-filter: blur(var(--blur));
+		backdrop-filter: blur(var(--blur));
+
+		border-radius: 0;
 	}
 
 	#page_footer{
 		grid-column: 1/3;
-		grid-row: 5/6;
+		grid-row: 4/5;
+		width: 60%;
+		padding: 5px;
+
+		border-bottom-left-radius: var(--radius);
+		border-bottom-right-radius: var(--radius);
+	}
+
+	#registration_field{
+		height: 90%;
+		width: 90%;
+		border-radius: var(--radius);
+		background-color: #fff;
+
+		box-sizing: border-box;
+		padding: 0 15px;
 	}
 
 	#login_field{
-		height: 100%;
-		width: 100%;
-
-		border-radius: 0;
-		border-bottom-left-radius: var(--radius);
+		width: 90%;
 	}
 
 	#link1, #link2, #link3, #link4 {
 		height: 70%;
 	}
+
+	#username_container{
+		width: 80%;
+	}
+
+	#password_container{
+		width: 80%;
+	}
 	
 	input{
 		font-size: 1rem;
-		width: 70%;
-	}
-
-	#registration_field{
-		width: 90%;
 	}
 
 }
