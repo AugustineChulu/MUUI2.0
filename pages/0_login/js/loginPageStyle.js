@@ -1,30 +1,18 @@
 /* FOCUS AND BLUR STYLES FOR THE INPUT FIELDS ON THE LOGIN FORM */
 
-const unField = document.getElementById('unField');
-const pwField = document.getElementById('pwField');
+document.getElementById('unField').onfocus = addStyle;
+document.getElementById('unField').onblur = removeStyle;
 
+document.getElementById('pwField').onfocus = addStyle;
+document.getElementById('pwField').onblur = removeStyle;
 
-unField.onfocus = addStyle;
-unField.onblur = removeStyle;
-
-pwField.onfocus = addStyle;
-pwField.onblur = removeStyle;
-
-function addStyle(){
-
-	const element = document.activeElement.id;
-
-	const fieldStyle = document.getElementById(element);
-
-	fieldStyle.setAttribute('style','background: linear-gradient(transparent,rgba(0, 238, 255, 0.2));');
+function addStyle(event){
+	event.target.setAttribute('style','background: linear-gradient(transparent,rgba(0, 238, 255, 0.2));');
 }
 
 
-function removeStyle(){
-
-	unField.removeAttribute('style');
-	pwField.removeAttribute('style');
-
+function removeStyle(event){
+		event.target.removeAttribute('style');
 }
 
 

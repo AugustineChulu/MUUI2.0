@@ -17,12 +17,10 @@
 		min-width: 100vw;
 		font-family: my_roboto;
 		font-size: 0.85rem;
-		background-color: #ffffff;
-
+		background-color: #6a9dc7;
 		background-image: url("../../images/login/MUlibrarySquare.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
-
 		display: grid;
 		grid-template-columns: 100%;
 		grid-template-rows: 15% 1fr 30% 10%;
@@ -64,7 +62,9 @@
 
 	#login_container{
 		grid-row: 2/3;
+		width: 100%;
 		display: grid;
+		justify-self: center;
 		grid-template-columns: 100%;
 		grid-template-rows: 100%;
 	}
@@ -72,6 +72,8 @@
 	#registration_container{
 		grid-row: 3/4;
 		display: grid;
+		width: 100%;
+		justify-self: center;
 		grid-template-columns: 100%;
 		grid-template-rows: 100%;
 		background-color: #fff;
@@ -90,7 +92,7 @@
 		background-color: rgb(230,230,230);
 		display: grid;
 		grid-template-columns: 100%;
-		grid-template-rows: 30% 40% 30%;
+		grid-template-rows: 1fr 20%;
 	}
 
 /* children of the top level login_container */
@@ -277,7 +279,6 @@
 		height: fit-content;
 		place-self: center;
 
-		padding: 3%;
 		color: #ffffff;
 		font-weight: bolder;
 		border-radius: 6px;
@@ -298,9 +299,10 @@
 		margin: 0 auto;
 		width: 100%;
 		border: none;
-		border-bottom: solid 2px #6a9dc7;
+		border: solid 2px #6a9dc7;
+		border-radius: var(--radius);
 		box-sizing: border-box;
-		padding: 5% 5% 0 5%;
+		padding: 7px;
 	}
 
 	input::placeholder{
@@ -315,20 +317,8 @@
 
 
 /* children of the page_footer */
-	#language_selector_container{
-		grid-row: 1/2;
-		width: fit-content;
-		height: fit-content;
-		justify-self: right;
-		align-self: center;
-
-		display: flex;
-		flex-flow: row nowrap;
-		padding-right: 5px;
-	}
-
-	#preferences_container_footer{
-		grid-row: 3/4;
+	#copyright_info{
+		grid-row: 2/3;
 		width: fit-content;
 		height: fit-content;
 		justify-self: left;
@@ -336,34 +326,6 @@
 		padding-left: 5px;
 
 		color: rgba(0, 0, 0, 0.5);
-	}
-
-	#change {
-		white-space: nowrap;
-		flex-grow: 1;
-		height: 100%;
-		color: #000000;
-		box-sizing: border-box;
-		padding: 0 2% 0 0;
-	}
-
-	#select_container {
-		width: fit-content;
-	}
-
-	#select_button {
-		font-size: 1em;
-		width: fit-content;
-		border: none;
-		padding: 0 1px;
-		border-left: solid #555555 2px;
-		background-color: rgba(98,151,195,0.3);
-		border-top-right-radius: var(--radius);
-		border-bottom-right-radius: var(--radius);
-	}
-	
-	#select_button:focus{
-		outline: none;
 	}
 
 /*OPTIMIZATION FOR WIDER SCREENS ||  TABLETS */
