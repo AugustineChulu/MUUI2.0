@@ -22,7 +22,7 @@
 
 		display: grid;
 		grid-template-columns: 100%;
-		grid-template-rows: 10% 5% 85%;
+		grid-template-rows: 80px 30px 1fr;
 	}
 
 	.columnFlexBox {
@@ -127,14 +127,16 @@
 		height: 20px;
 		margin: 0 10px 0 0;
 		border: none;
+		color: #fff;
 		background-color: rgba(255, 255, 255, 0.2);
 		border-radius: var(--radius);
+
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 100%;
+		place-items: center;
 	}
 
-	#humMenuIcon{
-		color: #fff;
-	}
-	
 	#pageTitle{
 		color: #ffffff;
 		font-weight: bold;
@@ -150,7 +152,7 @@
 		height: 35px;
 		width: 100%;
 		justify-content: center;
-		padding: 8px 0;
+		padding: 5px 0;
 	}
 	
 	.nav_link{
@@ -193,8 +195,8 @@
 	
 	#root_container {
 		font-size: 1rem;
-		grid-template-columns: 15% 85%;
-		grid-template-rows: 15% 85%;
+		grid-template-columns: 200px 1fr;
+		grid-template-rows: 120px 1fr;
 	}
 	
 	#header_container {
@@ -209,12 +211,16 @@
 		grid-row: 2/3;
 		grid-column: 2/3;
 		
-		border-top-left-radius: var(--radius);
-		border-top-right-radius: 0;
+		border-radius: 0;
+		border-top-right-radius: var(--radius);
 	}
 	
 	#currentPage {
 		display: none;
+	}
+
+	#user_info{
+		place-self: start;
 	}
 	
 	#navigation_panel {
@@ -223,12 +229,17 @@
 		white-space: wrap;
 		height: 100%;
 		width: 100%;
+		justify-content: space-evenly;
+		background-color: #cfebf7;
 		box-sizing: border-box;
 		box-shadow: none;
 		padding: 0 5px;
-		background-color: transparent;
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
+		border-radius: 0;
+		border-top-left-radius: var(--radius);
+	}
+
+	.nav_link{
+		color: #6297c3;
 	}
 	
 	.navigation_menu_item{

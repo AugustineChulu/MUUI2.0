@@ -302,7 +302,7 @@
 		border: solid 2px #6a9dc7;
 		border-radius: var(--radius);
 		box-sizing: border-box;
-		padding: 7px;
+		padding: 8px;
 	}
 
 	input::placeholder{

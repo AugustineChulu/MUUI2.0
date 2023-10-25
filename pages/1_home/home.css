@@ -11,12 +11,10 @@
 	width: 95%;
 	justify-self: center;
 	align-self: end;
-	position: relative;
-	bottom: 0;
 	
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 25px 1fr;
+	grid-template-rows: auto 1fr;
 	
 }
 
@@ -24,9 +22,13 @@
 /* children of the collapsible_welcome_msg_container */
 #collapsible_hundle{
 	grid-row: 1/2;
-	height: 100%;
-	width: 100%;
 	justify-self: center;
+	color: #fff;
+	border: none;
+	padding: 0 15px;
+	background-color: #6297c3;
+	border-top-right-radius: 50%;
+	border-top-left-radius: 50%;
 }
 
 #welcome_msg_container{
@@ -36,6 +38,10 @@
 	box-sizing: border-box;
 	padding: 10px;
 	background-color: #cfebf7;
+	border: solid 2px #6297c3;
+	border-bottom: none;
+	border-top-right-radius: var(--radius);
+	border-top-left-radius: var(--radius);
 }
 
 
@@ -47,14 +53,16 @@
 
 header {
 		font-weight: bolder;
-		padding: 2% 0;
+		padding: 5px 0;
 }
 
 #options_container {
 	height: fit-content;
 	width: 100%;
 	box-sizing: border-box;
-	padding: 2%;
+	padding: 10px;
+	font-size: 0.8em;
+	align-items: center;
 }
 
 
@@ -62,26 +70,24 @@ header {
 #options {
 	flex-wrap: wrap;
 	height: fit-content;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
+	width: fit-content;
+	gap: 8px;
 }
 
 
 /* children of the options */
 .optionCard{
-	height: 80px;
+	height: fit-content;
 	width: 80px;
-	justify-content: space-evenly;
+	gap: 5px;
+	justify-content: space-between;
 	align-items: center;
-	box-sizing: border-box;
-	margin: 10px;
 	color: #000000;
 }
 
 .icon {
 	box-sizing: border-box;
-	padding: 10%;
+	padding: 10px;
 	border-radius: 10px;
 	background-color: #f2fafc;
 	box-shadow: 0 4px 5px #50b4f0;
@@ -96,9 +102,11 @@ header {
 {
 	
 	#collapsible_welcome_msg_container{
-	width: 55%;
-	grid-template-rows: 35px 1fr;
-	
+	width: 60%;
+	}
+
+	#options_container {
+		padding: 20px 10px;
 	}
 	
 }
@@ -111,10 +119,6 @@ header {
 @media only screen and (min-width: 950px)
 {
 
-	.optionCard{
-	height: 100px;
-	width: 100px;
-	}
 
 
 }

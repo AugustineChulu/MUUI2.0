@@ -1,7 +1,7 @@
 
 let welcomeMsgContainer = document.getElementById('welcome_msg_container');
 
-const collapsibleHandleArrow = document.getElementById('collapsible_hundle_arrow');
+const collapsibleHandleArrow = document.getElementById('hundle_arrow_container');
 
 const welcomeMsgContainerStyle = window.getComputedStyle(welcomeMsgContainer,null);
 
@@ -17,14 +17,14 @@ function changeVisibility()
 
 		welcomeMsgContainer.setAttribute('style', 'display: none;');
 		
-		collapsibleHandleArrow.setAttribute('transform', 'rotate(180)');
+		collapsibleHandleArrow.style.transform = 'rotate(180deg)';
 
 	}
 	else {
 
     	welcomeMsgContainer.setAttribute('style', 'display: block;');
     	
-    	collapsibleHandleArrow.setAttribute('transform', 'rotate(0)');
+    	collapsibleHandleArrow.style.transform = 'rotate(0deg)';
 
 	}
 
