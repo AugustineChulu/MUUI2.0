@@ -211,7 +211,7 @@
 		align-items: center;
 	}
 
-	#link1, #link2, #link3, #link4 {
+	.redirect_link {
 		color: #ffffff;
 		height: 40%;
 		text-align: center;
@@ -435,6 +435,10 @@
 	
 	input{
 		font-size: 1rem;
+	}
+
+	.redirect_link:hover{
+		background-color: #0070a0;
 	}
 
 }

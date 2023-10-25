@@ -195,7 +195,7 @@
 	
 	#root_container {
 		font-size: 1rem;
-		grid-template-columns: 200px 1fr;
+		grid-template-columns: 250px 1fr;
 		grid-template-rows: 120px 1fr;
 	}
 	
@@ -230,16 +230,12 @@
 		height: 100%;
 		width: 100%;
 		justify-content: space-evenly;
-		background-color: #cfebf7;
+		background-color: #0070a0;
 		box-sizing: border-box;
 		box-shadow: none;
-		padding: 0 5px;
+		padding: 0 10px;
 		border-radius: 0;
 		border-top-left-radius: var(--radius);
-	}
-
-	.nav_link{
-		color: #6297c3;
 	}
 	
 	.navigation_menu_item{

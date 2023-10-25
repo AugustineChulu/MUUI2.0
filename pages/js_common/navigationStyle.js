@@ -57,7 +57,7 @@ function selectedOptionStyle(){
 			selectedPage.parentElement.setAttribute('style','display: none');
 		}else{ 
 			// false for not mobile device  
-			selectedPage.setAttribute('style','color: #6297c3');
+			selectedPage.setAttribute('style','color: #0070a0');
 			selectedPage.parentElement.setAttribute('style','background-color: #ffffff');
 		}
 		

@@ -7,7 +7,7 @@ document.getElementById('pwField').onfocus = addStyle;
 document.getElementById('pwField').onblur = removeStyle;
 
 function addStyle(event){
-	event.target.setAttribute('style','background: linear-gradient(transparent,rgba(0, 238, 255, 0.2));');
+	event.target.setAttribute('style','background-color: rgba(0, 238, 255, 0.2);');
 }
 
 
