@@ -1,4 +1,4 @@
-/*REFERENCE CODE FOR LONG SCREENS || PHONES */
+/*OPTIMIZATION CODE FOR LONG SCREENS || PHONES */
 
 #main_content_container{
 	display: grid;
@@ -45,9 +45,10 @@
 	padding: 10px;
 	background-color: #cfebf7;
 	border: solid 2px #0070a0;
+	border-top-width: 5px;
 	border-bottom: none;
-	border-top-right-radius: var(--radius);
-	border-top-left-radius: var(--radius);
+	border-top-right-radius: var(--corner_radius);
+	border-top-left-radius: var(--corner_radius);
 }
 
 

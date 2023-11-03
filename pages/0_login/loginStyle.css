@@ -1,0 +1,451 @@
+/*OPTIMIZATION CODE FOR LONG SCREENS || PHONES */
+
+:root {
+	--corner_radius: 8px;
+	--blur_intensity: 5px;
+
+	/*THEME COLORS*/
+	--accent: rgb(106, 157, 199);
+}
+
+@font-face {
+		font-family: my_roboto;
+		src: url("../../fonts/Roboto-Regular.ttf");
+	}
+
+	body {
+		margin: 0;
+	}
+
+	header{
+		font-weight: bold;
+	}
+
+	#root_container{
+		min-height: 100vh;
+		width: 100vw;
+		min-width: 100vw;
+		font-family: my_roboto;
+		font-size: 0.9rem;
+		background-color: var(--accent);
+		background-image: url("../../images/login/MUlibraryLong.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		display: grid;
+		grid-auto-flow: row;
+		grid-template-rows: fit-content(300px);
+		justify-items: center;
+	}
+
+/*REFERENCE CODE FOR LONG SCREENS || PHONES */
+
+/* top level containers */
+	#redirects_container{
+		height: fit-content;
+		grid-row: 1;
+		width: 95%;
+		border-bottom-left-radius: var(--corner_radius);
+		border-bottom-right-radius: var(--corner_radius);
+
+		border: solid 1px;
+		border-top: none;
+		border-color: rgba(255,255,255,0.5);
+		background-color: rgba(98,151,195,0.7);
+		-webkit-backdrop-filter: blur(var(--blur_intensity));
+		backdrop-filter: blur(var(--blur_intensity));
+
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		place-items: center;
+	}
+
+	#login_container{
+		grid-row: 2;
+		height: 100%;
+		width: 100%;
+
+		display: grid;
+		place-items: center;
+	}
+
+	#registration_container{
+		grid-row: 3;
+		width: 100%;
+		background-color: #fff;
+
+		display: grid;
+		place-items: center;
+	}
+
+	#page_footer{
+		grid-row: 4;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 5px;
+
+		box-sizing: border-box;
+		padding-top: 50px;
+
+		background-color: #c0c0c0;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 1fr auto;
+	}
+
+/* children of the top level login_container */
+	#login_field{
+		height: fit-content;
+		width: 95%;
+		border-radius: var(--corner_radius);
+		background: rgba(255,255,255,0.9);
+		-webkit-backdrop-filter: blur(var(--blur_intensity));
+		backdrop-filter: blur(var(--blur_intensity));
+
+		box-sizing: border-box;
+		padding: 10px;
+		margin: 20px 0;
+
+		display: grid;
+		grid-auto-flow: row;
+		gap: 10px;
+	}
+
+/* children of the top level registration_container */
+	#registration_field{
+		height: fit-content;
+		width: 95%;
+
+		box-sizing: border-box;
+		padding: 20px 0;
+
+		display: grid;
+		grid-auto-flow: row;
+		gap: 30px;
+	}
+
+/* children of the registration_field */
+
+	#welcome_text{
+		grid-row: 1/2;
+		height: fit-content;
+		width: 100%;
+		text-align: center;
+		align-self: center;
+	}
+
+	#application_buttons_container{
+		grid-row: 2/3;
+		height: fit-content;
+		width: 100%;
+		place-self: center;
+
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 50% 50%;
+	}
+
+/* children of the application_buttons_container */
+	#application_opt1{
+		font-weight: bold;
+		grid-row: 1/2;
+		height: fit-content;
+		width: 100%;
+		place-self: center;
+
+		background-color: rgba(98,151,195,0.8);
+		border-style: none;
+		color: #ffffff;
+		padding: 10px 0;
+		margin-bottom: 2px;
+		overflow: wrap;
+		border-top-right-radius: var(--corner_radius);
+		border-top-left-radius: var(--corner_radius);
+	}
+
+	#application_opt2{
+		font-weight: bold;
+		grid-row: 2/3;
+		height: fit-content;
+		width: 100%;
+		place-self: center;
+
+		background-color: rgba(205,72,55,0.8);
+		border-style: none;
+		color: #ffffff;
+		padding: 10px 0;
+		margin-top: 2px;
+		border-bottom-right-radius: var(--corner_radius);
+		border-bottom-left-radius: var(--corner_radius);
+	}
+
+/* children of the redirects_container */
+	#mulungushiLogoImage{
+		grid-row: 1;
+		width: 300px;
+		height: auto;
+		margin: 10px 0;
+	}
+
+	#redirect_links{
+		grid-row: 2;
+		height: fit-content;
+		width: fit-content;
+		justify-self: center;
+
+		margin: 0;
+		box-sizing: border-box;
+		padding: 5px;
+
+		display: flex;
+		flex-flow: row wrap;
+        justify-content: center;
+        gap: 5px;
+	}
+
+	.redirect_link {
+		list-style: none;
+		color: #fff;
+		background-color: rgba(255, 255, 255, 0.2);
+		border-radius: var(--corner_radius);
+		box-sizing: border-box;
+		padding: 10px;
+	}
+
+/* children of the login_field */
+	#login_container_header{
+		grid-row: 1;
+		text-align: center;
+
+		box-sizing: border-box;
+		padding: 10px 0;
+	}
+
+	#login_form{
+		grid-row: 2;
+		width: 100%;
+		height: fit-content;
+
+		display: grid;
+		grid-auto-flow: row;
+		place-items: center;
+		gap: 20px;
+		
+		border-radius: var(--corner_radius);
+	}
+
+	#login_container_footer{
+		grid-row: 3;
+		width: fit-content;
+		height: fit-content;
+		align-self: self-end;
+		color: rgb(0, 206, 255);
+		
+		box-sizing: border-box;
+		padding-top: 10px;
+	}
+
+
+/* children of the login_form */
+	#username_container{
+		grid-row: 1;
+		width: 70%;
+		height: fit-content;
+	}
+
+	#password_container{
+		grid-row: 2;
+		width: 70%;
+		height: fit-content;
+	}
+
+	#login_button{
+		grid-row: 3;
+		width: fit-content;
+		height: fit-content;
+
+		padding: 10px 20px;
+		color: #ffffff;
+		font-weight: bolder;
+		background-color: rgba(106,157,199,0.7);
+	}
+
+	label{
+		display: block;
+		margin: 0 auto 5px auto;
+		width: fit-content;
+		font-weight: bold;
+	}
+
+	input {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		border: none;
+		border: solid 2px var(--accent);
+		border-radius: var(--corner_radius);
+		box-sizing: border-box;
+		padding: 8px;
+	}
+
+	input::placeholder{
+		text-align: center;
+		font-weight: bolder;
+		color: rgba(0, 0, 0, 0.1);
+	}
+	
+	input:focus{
+		outline: none;
+	}
+
+
+/* children of the page_footer */
+	#copyright_info{
+		grid-row: 2/3;
+		width: fit-content;
+		height: fit-content;
+		justify-self: left;
+		align-self: center;
+		padding-left: 5px;
+
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  TABLETS */
+
+@media only screen and (min-width: 660px)
+{
+
+	#redirects_container, #login_container {
+		width: 60%;
+	}
+
+	#registration_field{
+		width: 50%;
+	}
+
+	#login_field{
+		width: 100%;
+	}
+
+	#username_container{
+		width: 50%;
+	}
+
+	#password_container{
+		width: 50%;
+	}
+
+	#mulungushiLogoImage{
+		width: 400px;
+	}
+	
+}
+
+
+
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  LAPTOPS */
+
+@media only screen and (min-width: 1000px)
+{
+	
+	.redirect_link:hover{
+		background-color: #0070a0;
+	}
+
+	#root_container{
+		font-size: 1rem;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 1fr auto auto auto 1fr;
+		background-image: url("../../images/login/MUlibraryWide.jpg");
+		-webkit-backdrop-filter: blur(var(--blur_intensity));
+		backdrop-filter: blur(var(--blur_intensity));
+		gap: 0;
+	}
+
+	#redirects_container{
+		grid-row: 2;
+		grid-column: 1/3;
+		height: 100%;
+		width: 70%;
+		grid-template-rows: 60% 40%;
+		border: none;
+
+		border-radius: 0;
+		border-top-left-radius: var(--corner_radius);
+		border-top-right-radius: var(--corner_radius);
+	}
+
+	#login_container{
+		grid-column: 2;
+		grid-row: 3;
+		width: 70%;
+		justify-self: start;
+		background: rgba(255,255,255,1);
+		-webkit-backdrop-filter: blur(var(--blur_intensity));
+		backdrop-filter: blur(var(--blur_intensity));
+	}
+
+	#registration_container{
+		grid-column: 1/2;
+		grid-row: 3/4;
+		width: 70%;
+		justify-self: end;
+		background: rgba(255,255,255,1);
+		-webkit-backdrop-filter: blur(var(--blur_intensity));
+		backdrop-filter: blur(var(--blur_intensity));
+
+		border-radius: 0;
+	}
+
+	#login_field{
+		margin: 0;
+		padding: 20px;
+	}
+
+	#registration_field{
+		margin: 0;
+		height: 100%;
+		width: 100%;
+		padding: 20px;
+		border-right: solid 1px #c0c0c0;	
+	}
+
+	#welcome_text{
+		align-self: start;
+		padding: 10px 0;
+	}
+
+	#application_buttons_container{
+		align-self: self-end;
+	}
+
+	#page_footer{
+		grid-column: 1/3;
+		grid-row: 4/5;
+		width: 70%;
+		padding: 50px 5px 5px 5px;
+
+		border-bottom-left-radius: var(--corner_radius);
+		border-bottom-right-radius: var(--corner_radius);
+	}
+	
+	input{
+		font-size: 1rem;
+	}
+
+	#username_container{
+		width: 60%;
+	}
+
+	#password_container{
+		width: 60%;
+	}
+
+	#mulungushiLogoImage{
+		width: 500px;
+	}
+
+}
