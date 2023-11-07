@@ -22,6 +22,7 @@
 	}
 
 	#root_container{
+		min-height: 100vh;
 		font-family: my_roboto;
 		font-size: 0.9rem;
 		background-color: var(--accent);
@@ -226,6 +227,7 @@
 
 		display: grid;
 		grid-auto-flow: row;
+		place-self: center;
 		place-items: center;
 		gap: 20px;
 		
@@ -326,12 +328,8 @@
 		width: 100%;
 	}
 
-	#username_container{
-		width: 50%;
-	}
-
-	#password_container{
-		width: 50%;
+	#login_form{
+		width: 90%;
 	}
 
 	#mulungushiLogoImage{
@@ -402,6 +400,10 @@
 		padding: 20px;
 	}
 
+	#login_form{
+		width: 100%;
+	}
+
 	#registration_field{
 		margin: 0;
 		height: 100%;
@@ -431,14 +433,6 @@
 	
 	input{
 		font-size: 1rem;
-	}
-
-	#username_container{
-		width: 60%;
-	}
-
-	#password_container{
-		width: 60%;
 	}
 
 	#mulungushiLogoImage{
